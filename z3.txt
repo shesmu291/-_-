@@ -1,0 +1,33 @@
+#include <iostream> 
+using namespace std;
+
+struct point
+{
+	float x;
+	float y;
+};
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+	point A, B, C;
+	cout << "введите координаты точки(x,y) плоскости А" << endl;
+	cin >> A.x >> A.y;
+	cout << "введите координаты точки В(x,y) отрезка ВС" << endl;
+	cin >> B.x >> B.y;
+	cout << "введите координаты точки С(x,y) отрезка ВС" << endl;
+	cin >> C.x >> C.y;
+
+	cout << "Лежит ли отрезок в плоскости А? да/нет (1/0)" << endl;
+	bool pr;
+	cin >> pr;
+
+	if (pr == 0) cout << "точка не может принадлежать отрезку, так как они находятся в разных плоскостях" << endl;
+	else
+	{
+		if (((A.x - B.x) / (A.y - B.y)) == ((A.x - C.x) / (A.y - C.y))) cout << "точка пренадлежит отрезку ВС" << endl;
+		else cout << "точка не пренадлежит отрезку ВС" << endl;
+	}
+
+	system("pause");
+}
