@@ -1,0 +1,38 @@
+#include <iostream> 
+using namespace std;
+
+bool Prime(int number)//проверка простое ли число
+{
+	bool isPrime = 1; 
+	for (int i = 2; i < number; i++) {
+		if (number % i == 0) 
+		{
+			isPrime = 0;  
+			break;             
+		}
+	}
+	return isPrime;
+}
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+	cout << "введите четное число (4 <= N <= 998) , которое требуется разложить" << endl;
+	int num,c1,c2;
+	cin >> num;
+	if (num % 2 == 0 && num>=4 && num<=998)
+	{
+		for (int i = num; i > 0; i--)
+		{
+			if (Prime(i) == 1 && Prime(num - i) == 1)
+			{
+				c1 = i;
+				c2 = num - i;
+
+			}
+		}
+		cout << num <<" = "<<c1<<" + "<<c2<< endl;
+	}
+	else cout << "это число не совпадает с требованиями" << endl;
+	system("pause");
+}
