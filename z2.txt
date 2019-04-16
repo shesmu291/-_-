@@ -1,15 +1,15 @@
-#include <iostream> 
+п»ї#include <iostream> 
 #include <cmath>
 using namespace std;
 
-int fibonacciIn(int n)//перевод из двоичной в числа фибоначчи
+int fibonacciIn(int n)//РїРµСЂРµРІРѕРґ РёР· РґРІРѕРёС‡РЅРѕР№ РІ С‡РёСЃР»Р° С„РёР±РѕРЅР°С‡С‡Рё
 {
 	int value = 0;
 	if (n < 1) return 0;
 	if (n == 1) return 1;
 	return fibonacciIn(n - 1) + fibonacciIn(n - 2);
 }
-int fibonacciSumm(int summ)//перевод в двоичную
+int fibonacciSumm(int summ)//РїРµСЂРµРІРѕРґ РІ РґРІРѕРёС‡РЅСѓСЋ
 {
 	long summ2 = 0;
 	for (int i = summ; i > 0; i--)
@@ -31,12 +31,12 @@ int fibonacciSumm(int summ)//перевод в двоичную
 void main()
 {
 	setlocale(LC_ALL, "Rus");
-	cout << "введите А и В" << endl;
+	cout << "РІРІРµРґРёС‚Рµ Рђ Рё Р’" << endl;
 	long long A, B,C,C1,summ,summ2;
 	int count = 0;
 	cin >> A >>B;
 
-	//для числа А
+	//РґР»СЏ С‡РёСЃР»Р° Рђ
 	C = A;
 	A = 0;
 	for (int i = 2; C > 0;i++)
@@ -45,7 +45,7 @@ void main()
 		if (C1 == 1) A = A + fibonacciIn(i);
 		C = C / 10;
 	}
-	//для числа В
+	//РґР»СЏ С‡РёСЃР»Р° Р’
 	C = B;
 	B = 0;
 	for (int i = 2; C > 0; i++)
@@ -54,7 +54,7 @@ void main()
 		if (C1 == 1) B = B + fibonacciIn(i);
 		C = C / 10;
 	}
-	//перевод суммы
+	//РїРµСЂРµРІРѕРґ СЃСѓРјРјС‹
 	cout << "A + B = " << fibonacciSumm(A + B) << endl;
 	
 

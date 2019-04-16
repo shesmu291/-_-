@@ -1,7 +1,7 @@
-#include <iostream> 
+п»ї#include <iostream> 
 using namespace std;
 
-bool Prime(int number)//проверка простое ли число
+bool Prime(int number)//РїСЂРѕРІРµСЂРєР° РїСЂРѕСЃС‚РѕРµ Р»Рё С‡РёСЃР»Рѕ
 {
 	bool isPrime = 1; 
 	for (int i = 2; i < number; i++) {
@@ -17,7 +17,7 @@ bool Prime(int number)//проверка простое ли число
 void main()
 {
 	setlocale(LC_ALL, "Rus");
-	cout << "введите четное число (4 <= N <= 998) , которое требуется разложить" << endl;
+	cout << "РІРІРµРґРёС‚Рµ С‡РµС‚РЅРѕРµ С‡РёСЃР»Рѕ (4 <= N <= 998) , РєРѕС‚РѕСЂРѕРµ С‚СЂРµР±СѓРµС‚СЃСЏ СЂР°Р·Р»РѕР¶РёС‚СЊ" << endl;
 	int num,c1,c2;
 	cin >> num;
 	if (num % 2 == 0 && num>=4 && num<=998)
@@ -33,6 +33,6 @@ void main()
 		}
 		cout << num <<" = "<<c1<<" + "<<c2<< endl;
 	}
-	else cout << "это число не совпадает с требованиями" << endl;
+	else cout << "СЌС‚Рѕ С‡РёСЃР»Рѕ РЅРµ СЃРѕРІРїР°РґР°РµС‚ СЃ С‚СЂРµР±РѕРІР°РЅРёСЏРјРё" << endl;
 	system("pause");
 }
